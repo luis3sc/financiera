@@ -1,0 +1,43 @@
+// https://stackoverflow.com/a/36389263
+var getTimeout = function(){var e=setTimeout,b={};setTimeout=function(a,c){var d=e(a,c);b[d]=[Date.now(),c];return d};return function(a){return(a=b[a])?Math.max(a[1]-Date.now()+a[0],0):NaN}}();
+
+// https://curtistimson.co.uk/post/js/default-negative-variables-to-zero-in-javascript/
+function sanitisePercentage(i){
+	return Math.min(100,Math.max(0,i));
+}
+
+// Slider
+var percentTime;
+var tick;
+var progressBar = document.querySelector('.swiper-hero-progress');
+
+var mySwiper = new Swiper('.swiper-container', {
+	effect: 'slide',
+	loop: true,
+	speed: 1000,
+	slidesPerView: 1,
+	grabCursor: true,
+	keyboard: {
+		enabled: true,
+		onlyInViewport: true
+	},
+	watchOverflow: true,
+	watchSlidesProgress: true,
+	watchSlidesVisibility: true,
+	roundLengths: true,
+	autoplay: {
+		delay: 3000,
+		disableOnInteraction: false
+	},
+	on: {
+		slideChange: function() {
+        	var swiper = this;
+			var defaultSlideDelay = swiper.params.autoplay.delay;
+			var currentIndex = swiper.realIndex + 1;
+			var currentSlide = swiper.slides[currentIndex];
+			var currentSlideDelay = currentSlide.getAttribute('data-swiper-autoplay') || defaultSlideDelay;
+			
+			
+		}
+	}
+});

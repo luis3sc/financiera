@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muñeco Auto Spa</title>
+    <link rel="stylesheet" href="./css/addons.css"> 
+    <link rel="stylesheet" href="./css/colores.css">
+    <link rel="stylesheet" href="./css/estilos-generales.css">
+    <link rel="stylesheet" href="./css/editar.css">
+
+    <meta name="theme-color" content="#01011f">
+    <meta name="description" content="Mucho mas que un Lavado" />
+    <meta name="keywords" content="Muñeco Carwash" />
+    <meta name="author" content="mitarjetadigitalperu.com">
+    <meta property="og:locale" content="es_ES"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Muñeco Carwash"/>
+    <meta property="og:description" content="Mucho mas que un Lavado" />
+    <meta property="og:url" content="https://mitarjetadigitalperu.com/muñecoautospa/"/>
+    <meta property="og:site_name" content="Muñeco Carwash"/>
+    <meta property="og:image" content="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Muñeco Carwash" />
+    <meta name="twitter:description" content="Mucho mas que un Lavado" />
+    <meta name="twitter:image" content="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <link rel="image_src" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <link rel="icon" href="./img/icon.webp">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="128x128" />
+    <meta name="msapplication-TileColor" content="#01011f" />
+    <meta name="msapplication-TileImage" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-square70x70logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-config" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp">
+    <meta name="msapplication-square150x150logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-wide310x150logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-square310x310logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+</head>
+<body class="hres overf">
+    <!-- Modales -->
+    <div class="modal fxd hres" id="modalReserva">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100 w100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cnegro bblanco h100 border20 padding1 gap1 rel flex-colum">
+                        <form  class="gap5 form w100 flex-colum flex-c" method="post" name="google-sheet" id="google-sheet"  autocomplete="off">
+                            <input type="hidden" name="idCliente" id="idCliente"  required>
+                            <p class="form-titulo tac mayusc">Reservar Visita</p>
+                            <div class="form-input flex-colum flex-c name">
+                                <!--     <label for="name">Nombre</label> -->
+                                <input placeholder="Nombres y Apellidos" class="border1px padding1 border2" type="text" id="NombreCliente" name="NombreCliente"  required>
+                                <p class="mensajeError"></p>
+                            </div>
+                            <div class="flex-row gap1" >
+                                <div class="form-input flex-colum flex-c email">  
+                                    <!--     <label for="email">DNI / Documento</label> -->
+                                    <input placeholder="DNI/Documento" class=" border1px padding1 border2"  type="number" id="DniCliente" name="DniCliente"   required>
+                                    <p class="mensajeError"></p>
+                                </div>
+
+                                <div class="form-input flex-colum flex-c mobile">
+                                    <!--     <label for="mobile">Celular</label> -->
+                                    <input placeholder="Celular" class=" border1px padding1 border2"  type="text" id="CelularCliente" name="CelularCliente"  required>
+
+                                    <p class="mensajeError"></p>
+                                </div>
+                            </div>
+                            <div class="form-input flex-colum flex-c mobile">
+                                <label class="bold" for="FechaReserva">Selecciona la fecha</label>
+                                <input class=" border1px padding1 border2"  type="date" id="FechaReserva" name="FechaReserva"  required>
+                                <p class="mensajeError"></p>
+                            </div>
+
+                            <div class="form-input flex-colum flex-c mobile">
+                                <label class="bold" for="HoraReserva">Selecciona la Hora</label>
+                                <input class=" border1px padding1 border2"  type="time" id="HoraReserva" name="HoraReserva" >
+
+                                <p class="mensajeError"></p>
+                            </div>  
+
+                            <p class="mgtp form-titulo mayusc tac">Datos de Vehículo</p>
+                            <div class="form-input flex-colum flex-c mobile">
+                                <!--      <label for="placaveh">Placa del vehículo</label> -->
+                                <input class="border1px padding1 border2"  type="text" id="PlacaAuto" name="PlacaAuto" placeholder="Nro de Placa del auto" required >
+                                <p class="mensajeError"></p>
+                            </div>
+                            <div class="flex-row gap1" >
+                                <div class="form-input flex-colum flex-c mobile">
+                                    <!--    <label for="marca">Marca</label> -->
+                                    <input class="border1px padding1 border2"  type="text" id="MarcaAuto" name="MarcaAuto" placeholder="Marca del auto" required >
+                                    <p class="mensajeError"></p>
+                                </div>
+                                <div class="form-input flex-colum flex-c mobile">
+                                    <!--  <label for="modelo">Modelo</label>  -->
+                                    <input class="border1px padding1 border2"  type="text" id="ModeloAuto" name="ModeloAuto" placeholder="Modelo del auto" required >
+                                    <p class="mensajeError"></p>
+                                </div>
+                            </div>
+
+                            <div class="form-boton mgtp05" >
+                                <input id="btn" type="submit" value="Reservar Ahora" class="mgauto h50p bordercircular w60 bprinci flex-centro colblanco bold ftsz1-1" >
+                            </div>
+                            <p class="mensajeCorrecto"></p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fxd hres" id="modalPromocion">
+        <div class="bodyModal w100 h100 rel pad01 flex-centro">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">¡Promociones! 😲</h2>
+                        <div class="padsup1 flex-colum gap1">
+                            
+                              <!-- Producto 1 -->  
+                              <a href="#" target="_blank" class="flex-row flex-a bx gap1 border20">
+                                <img class="w100 border20" src="./img/webp/promo.webp" alt="">
+                                
+                            </a>
+                             <!-- Producto 1 -->   
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalTorneo">
+        <div class="bodyModal w100 h100 rel pad01 flex-centro">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Torneos 🏆</h2>
+                        <div class="padsup1 flex-colum gap1">
+                             <!-- Producto 1 -->  
+                                <div class="flex-colum rel sinover bx border20">
+                                <img class="w100" src="./img/webp/dotamania-portada-liga.webp" alt="">
+                                <div class="w100 padding1 flex-colum gap5">
+                                <h3>Liga Dotamania</h3>
+                                <p>Ate, Av. Las magnolias 123</p>
+                                <b>16 de Junio, 2:00 pm</b>
+                                <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro em0-9">
+                                    Registrarse Ahora
+                                    <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                </a>
+                                </div>
+                                </div>
+                             <!-- Producto 1 --> 
+                             <!-- Producto 1 -->  
+                             <div class="flex-colum rel sinover bx border20">
+                                <img class="w100" src="./img/webp/portada-torneo.webp" alt="">
+                                <div class="w100 padding1 flex-colum gap5">
+                                <h3>Torneo Dota 2 Semanal</h3>
+                                <p>Ate, Av. Las magnolias 123</p>
+                                <b>16 de Junio, 2:00 pm</b>
+                                <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro em0-9">
+                                    Registrarse Ahora
+                                    <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                </a>
+                                </div>
+                                </div>
+                             <!-- Producto 1 --> 
+                            
+                             <!-- Producto 1 -->   
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalMisiones">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <div class="overf w100 cblanco h100 border20 padding1 flex-colum gap1">
+                        <div class="flex-colum">
+                        <h2>Misiones a Cumplir</h2>
+                        <p>Completa las misiones y recibe puntos para canjear por promociones exclusivas.</p>
+                        </div>  
+                        <!--
+                        <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                            <div class="top-1-5 bgris3 abs padop1 border20 bold">Código QR</div>
+                            <img class="w100 border20" loading="lazy" src="./img/webp/qrchololo.webp" alt="">
+                        </div> 
+                        -->
+                        <div class="bblanco w100 flex-c flex-colum rel gap1">
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Registrate en Nuestra Tarjeta Digital</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Agenda tu primera visita o servicio</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Completa el formulario de Experiencia de Servicio</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Dar Likea Nuestras Redes Sociales</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Referir 5 Usuarios con tu código de Usuario</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                             <div class="h75p padding1 bx flex border20">
+                                <p class="w70">Recomienda nuestro Negocio en Facebook</p>
+                                <b class="w30 flex-centro">+1 Pto</b>
+                             </div>
+                        </div>  
+                        <section class="tac bblanco padsup5px em0-9">
+                            <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                        </section>
+                    </div>
+                    <div class="confirmation abs">
+                        <span class="icon-checkmark"></span> Copied to clipboard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalReferral">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <div class="overf w100 cblanco h100 border20 padding1 flex-colum gap1">
+                        <div class="flex-colum">
+                        <h2>Referir Usuarios</h2>
+                        <p>Recibe 1 punto por Referir un Nuevo Usuario con tu código de Referido.</p>
+                        </div>  
+                        <!--
+                        <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                            <div class="top-1-5 bgris3 abs padop1 border20 bold">Código QR</div>
+                            <img class="w100 border20" loading="lazy" src="./img/webp/qrchololo.webp" alt="">
+                        </div> 
+                        -->
+                        <div></div>
+                        <div class="bx bblanco w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                            <div class="top-1-5 bgris3 abs padop1 border20 bold">Comparte tu Código de Referido</div>
+                            
+                            <p>Recuerda que cada nuevo usuario de ingresar tu código de referido para obtener la recompensa</p>
+                            <div class="w90 flex tac">
+                                <div class="num colnegro copy">ADE000012</div>
+                                <button class="icon-copy rel" id="copia">
+                                    COPIAR
+                                </button>
+                            </div> 
+                        </div>
+                        <div></div>
+                        <div class="bx w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                                <div class="top-1-5 bgris3 abs padop1 border20 bold">Compartir Vía Redes Sociales</div>
+                                <div class="w100 grid2  flex-colum">
+                                    <a href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.mitarjetadigitalperu.com%2Fcevicheriala15%2F&app_id=291494419107518&redirect_uri=https%3A%2F%2Fwww.mitarjetadigitalperu.com/cevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/messenger-round.svg" alt=""></a>
+                                    <a href="https://api.whatsapp.com/send?text=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"> <img loading="lazy" src="./img/iconos/whastapp-round.svg" alt=""></a>                 
+                                    <a href="https://t.me/share/url?url=https://mitarjetadigitalperu.com/cevicheriala15&text=visita%20mi%20tarjeta%20digital" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/telegram-round.svg" alt=""></a>                       
+                                    <a href="https://mail.google.com/mail/?view=cm&to=&su=Vísitanos+en+nuestra+página+web&body=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/gmail-round.svg" alt=""></a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmitarjetadigitalperu.com%2Fcevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/linkedin.svg" alt=""></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/facebook-round.svg" alt=""></a>
+                                    <a href="https://twitter.com/intent/tweet?url=Visita%20nuestra%20tarjeta%20digital%20en%20https://mitarjetadigitalperu.com/cevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/twitter-round.svg" alt=""></a>
+                                </div>
+                            
+                        </div>    
+                        <section class="tac bblanco padsup5px em0-9">
+                            <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                        </section>
+                    </div>
+                    <div class="confirmation abs">
+                        <span class="icon-checkmark"></span> Copied to clipboard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalCompartir">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <div class="overf w100 cblanco h100 border20 padding1 flex-colum gap1">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Comparte mi Tarjeta Digital</h2>
+                        <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                            <div class="top-1-5 bgris3 abs padop1 border20 bold">Código QR</div>
+                            <img class="w100 border20" loading="lazy" src="./img/webp/qrchololo.webp" alt="">
+                        </div> 
+                        <div></div>
+                        <div class="bx w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                                <div class="top-1-5 bgris3 abs padop1 border20 bold">Compartir Vía Redes Sociales</div>
+                                <div class="w100 grid2  flex-colum">
+                                    <a href="https://www.facebook.com/dialog/send?link=https%3A%2F%2Fwww.mitarjetadigitalperu.com%2Fcevicheriala15%2F&app_id=291494419107518&redirect_uri=https%3A%2F%2Fwww.mitarjetadigitalperu.com/cevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/messenger-round.svg" alt=""></a>
+                                    <a href="https://api.whatsapp.com/send?text=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"> <img loading="lazy" src="./img/iconos/whastapp-round.svg" alt=""></a>                 
+                                    <a href="https://t.me/share/url?url=https://mitarjetadigitalperu.com/cevicheriala15&text=visita%20mi%20tarjeta%20digital" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/telegram-round.svg" alt=""></a>                       
+                                    <a href="https://mail.google.com/mail/?view=cm&to=&su=Vísitanos+en+nuestra+página+web&body=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/gmail-round.svg" alt=""></a>
+                                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmitarjetadigitalperu.com%2Fcevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/linkedin.svg" alt=""></a>
+                                    <a href="https://www.facebook.com/sharer.php?u=https://mitarjetadigitalperu.com/fransacarwash" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/facebook-round.svg" alt=""></a>
+                                    <a href="https://twitter.com/intent/tweet?url=Visita%20nuestra%20tarjeta%20digital%20en%20https://mitarjetadigitalperu.com/cevicheriala15" target="_blank" class="icon-circ border20 flex-centro"><img loading="lazy" src="./img/iconos/twitter-round.svg" alt=""></a>
+                                </div>
+                            
+                        </div>    
+                        <section class="tac bblanco padsup5px em0-9">
+                            <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalUbicacion">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <div class="overf w100 padding1 cblanco h100 border20 flex-colum gap1">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Ubicacion</h2>
+                        <a class="flex gap1 flex-a colnegro" href="https://goo.gl/maps/V5dPbcXDc7sdTcea8" target="_blank">
+                            <img class="ico-op f-blanco" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
+                            <p>Asoc. de prop. 7 de Agosto Mz. C LT.2 - Callao</p></a>
+                        
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.6590816038071!2d-77.1140924174282!3d-11.99964711478792!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105cdcd55ebe0ed%3A0x7e78aa15bfd1908c!2sC.%203%2C%20Callao%2007031!5e0!3m2!1ses!2spe!4v1688073877324!5m2!1ses!2spe" class="mapa w100" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalWhastapp">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h90 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Datos de Contacto</h2>
+                        <section class="flex-colum padsupe">
+                            <a href="https://api.whatsapp.com/send?phone=51964921625&text=%C2%A1Hola!%20Quiero%20mas%20informaci%C3%B3n" target="_blank" class="colnegro w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/whastapp-round.svg" alt="">
+                                <div>
+                                    <p>Whastapp</p>
+                                    <h4>964921625</h4>
+                                </div>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=51937176689&text=%C2%A1Hola!%20Quiero%20mas%20informaci%C3%B3n" target="_blank" class="colnegro w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/whastapp-round.svg" alt="">
+                                <div>
+                                    <p>Whastapp 2</p>
+                                    <h4>937176689</h4>
+                                </div>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=51941333866&text=%C2%A1Hola!%20Quiero%20mas%20informaci%C3%B3n" target="_blank" class="colnegro w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/whastapp-round.svg" alt="">
+                                <div>
+                                    <p>Whastapp 3</p>
+                                    <h4>941333866</h4>
+                                </div>
+                            </a>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalContacto">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="rel w100 bblanco colnegro h100 border20 flex-colum gap1 sinoverhor oververt">
+                        
+                        <div class="zindex1 rel padding1 border20 h100 flex-colum flex-a gap1">
+                        <img class="w30 mgtp zindex3" src="./img/webp/logo.png" alt="">
+                        <div class="tac">
+                     <!--   <h2 class="b">Muñeco Auto Spa</h2> -->
+                        <p>Servicio de Lavado de autos al detalle</p>
+                        </div>
+                        <section class="flex-colum paddingbot gap1">
+                            <div>
+                            <h3>Datos de Contacto</h3>
+                            <p>Click en los íconos para interactuar</p>
+                        </div>
+                            <a href="tel:+51923924940" class="colnegro w100 mgauto padop1 border20 bgris3 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/telefono-round.svg" alt="">
+                                <div>
+                                    <p>Llamar</p>
+                                    <h4>923924940</h4>
+                                </div>
+                            </a>
+                            <a target="_blank" class="colnegro w100 mgauto padop1 border20 bgris3 flex flex-a gap1" href="https://api.whatsapp.com/send?phone=51923924940&text=%C2%A1Hola!%20Vengo%20de%20ver%20la%20tarjeta%20digital%20y%20Quiero%20mas%20informaci%C3%B3n" >
+                                <img class="icon-social" src="./img/iconos/whastapp-round.svg" alt="">
+                                <div>
+                                    <p>Enviar Whastapp</p>
+                                    <h4>923924940</h4>
+                                </div>
+                            </a>
+                            <a class="colnegro w100 mgauto padop1 border20 bgris3 flex flex-a gap1" href="https://goo.gl/maps/V5dPbcXDc7sdTcea8" target="_blank" >
+                                <img class="icon-social" src="./img/iconos/mapa-round.svg" alt="">
+                                <div>
+                                    <p>Ubicación ¿Cómo Llegar?</p>
+                                    <h4>Asoc. de prop. 7 de Agosto Mz. C LT.2 - Callao</h4>
+                                </div>
+                            </a>
+                            <div class="w100 mgauto padop1 border20 bgris3 flex flex-a gap1">
+                                <img class="icon-social" src="./img/horario.png" alt="">
+                                <div>
+                                    <p>Horario de Atención</p>
+                                    <h4>Lunes a Domingo de<br>7:00 AM - 7:00 PM</h4>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="flex-colum w100">
+                            <h3>Redes Sociales</h3>
+                            <div class="flex-row gap1 padding1">
+                            <a href="https://www.facebook.com" target="_blank" class="icon-social">
+                                <img class="icon-social" src="./img/iconos/facebook-round.svg" alt="">
+                               
+                            </a>
+                             <a href="https://www.instagram.com" target="_blank" class="icon-social">
+                                <img class="icon-social" src="./img/iconos/instagram-rounda.svg" alt="">
+                                
+                            </a>
+                           <a href="https://www.youtube.com/" target="_blank" class="icon-social">
+                                <img class="icon-social" src="./img/iconos/youtube-round.svg" alt="">
+                               
+                            </a> 
+                            <a href="https://www.tiktok.com/" target="_blank" class="icon-social">
+                                <img class="icon-social" src="./img/iconos/tiktok-round.svg" alt="">
+                              
+                            </a> 
+                            </div>
+                            <!--
+                            <a href="https://www.facebook.com/La15cevicheria" target="_blank" class="w100 mgauto padsup1 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/facebook-round.svg" alt="">
+                                <div>
+                                    <p>Facebook</p>
+                                    <h4>La 15 Cevicheria</h4>
+                                </div>
+                            </a>
+                             <a href="https://www.instagram.com/chololocarwash" target="_blank" class="w100 mgauto padsup1 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/instagram-rounda.svg" alt="">
+                                <div>
+                                    <p>Instagram</p>
+                                    <h4>chololocarwash</h4>
+                                </div>
+                            </a>
+                           <a href="https://www.youtube.com/" target="_blank" class="w100 mgauto padsup1 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/youtube-round.svg" alt="">
+                                <div>
+                                    <p>Youtube</p>
+                                    <h4>@tortaza</h4>
+                                </div>
+                            </a> 
+                            <a href="https://www.tiktok.com/@washappslimpieza" class="w100 mgauto padsup1 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/tiktok-round.svg" alt="">
+                                <div>
+                                    <p>Tiktok</p>
+                                    <h4>WashApp Limpieza</h4>
+                                </div>
+                            </a> 
+                            -->
+                        </section>
+                        </div>   
+                    </section>
+                 <!-- <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Datos de Contacto</h2>
+                        <section class="flex-colum padsupe">
+                            <a href="tel:+51949809943" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/telefono-round.svg" alt="">
+                                <div>
+                                    <p>Celular 1</p>
+                                    <h4>949809943</h4>
+                                </div>
+                            </a>
+                            <a target="_blank" href="https://api.whatsapp.com/send?phone=51949809943&text=%C2%A1Hola!%20Vengo%20de%20ver%20la%20tarjeta%20digital%20y%20Quiero%20mas%20informaci%C3%B3n" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/whastapp-round.svg" alt="">
+                                <div>
+                                    <p>Whastapp</p>
+                                    <h4>949809943</h4>
+                                </div>
+                            </a>
+                            <a href="https://goo.gl/maps/p2BivyhDDDzGm5Eh7" target="_blank" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/mapa-round.svg" alt="">
+                                <div>
+                                    <p>Ubicación</p>
+                                    <h4>San Genaro - Chorrillos</h4>
+                                </div>
+                            </a>
+                            <div class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/horario.png" alt="">
+                                <div>
+                                    <p>Horario</p>
+                                    <h4>Lunes a Doming de<br>8:00 AM - 7:00 PM</h4>
+                                </div>
+                            </div>
+                        </section>
+                    </section>-->  
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalPuntos">
+        <div class="bodyModal w100 h100 rel pad01 flex-centro">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        
+                        <div class="w100 flex-c">
+                            <div class="w70">
+                            <h2 class="colnegro">Bienvenido <span class="colrojo"> Usuario</span></h2>
+                            <p>Adquiere todos nuestros Beneficios</p>
+                            </div>
+                            <div class="w30 flex-c">
+                                <div class="icon-circ bordercircular bgris">
+                                </div>
+                            </div>    
+                        </div>
+
+                        <div class="padsup1 flex-colum gap1">
+                            <!--Usuario-->
+                            <div class="flex-colum">
+                                <h3>Mi Usuario</h3>
+                                <div class="Wrap">
+                                    <div class="Base">
+                                      <div class="Inner-wrap fondo-dragon">
+                                        <div class="w100 flex-spacebetween flex-a">
+                                  <!--       Header SVG -->
+                                       <img class="w30" src="./img/webp/logo.png" alt="">
+                                  <!-- Card Chip SVG -->
+                                        <svg class="menu-ico" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+       viewBox="0 0 387.8 380.3" style="enable-background:new 0 0 387.8 380.3;" xml:space="preserve">
+  <style type="text/css">
+      .st0{fill:url(#gold-gradient);stroke:#000000;stroke-width:10;stroke-miterlimit:10;}
+  </style>
+  <defs>
+  <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#c79750"></stop>
+        <stop offset="20%" stop-color="#e6b964"></stop>
+        <stop offset="50%" stop-color=" #f8e889"></stop>
+        <stop offset="80%" stop-color=" #deb15f"></stop>
+        <stop offset="100%" stop-color=" #dfb461"></stop>
+      </linearGradient>
+  </defs>
+  <g id="XMLID_4_">
+      <path id="XMLID_1_" class="st0" d="M308.8,375.3H79.1C38.2,375.3,5,342.1,5,301.2V79.1C5,38.2,38.2,5,79.1,5h229.7
+          c40.9,0,74.1,33.2,74.1,74.1v222.2C382.8,342.1,349.7,375.3,308.8,375.3z"/>
+      <line id="XMLID_2_" class="st0" x1="109.9" y1="5.1" x2="109.9" y2="375.1"/>
+      <line id="XMLID_3_" class="st0" x1="4.9" y1="95.1" x2="109.9" y2="95.1"/>
+      <line id="XMLID_7_" class="st0" x1="4.9" y1="185.1" x2="109.9" y2="185.1"/>
+      <line id="XMLID_8_" class="st0" x1="1.9" y1="275.1" x2="106.9" y2="275.1"/>
+      <line id="XMLID_9_" class="st0" x1="276.9" y1="275.1" x2="381.9" y2="275.1"/>
+      <line id="XMLID_10_" class="st0" x1="274.9" y1="185.1" x2="379.9" y2="185.1"/>
+      <line id="XMLID_11_" class="st0" x1="277.9" y1="95.1" x2="382.9" y2="95.1"/>
+      <g id="XMLID_6_">
+          <g id="XMLID_14_">
+              <g id="XMLID_32_">
+                  <path id="XMLID_33_" d="M277.4,90.1h-1c-2.5,0-4.5,2-4.5,4.5v272c0,2.5,2,4.5,4.5,4.5h1c2.5,0,4.5-2,4.5-4.5v-272
+                      C281.9,92.1,279.9,90.1,277.4,90.1z"/>
+              </g>
+          </g>
+      </g>
+  </g>
+                                        </svg>
+                                        </div>
+                                        <div class="Card-number flex-colum flex-c gap5">
+                                            <p>Código de Referencia</p>
+                                          <ul class="flex gap1 flex-c bold">
+                                            <li id="first-li">4351</li>
+                                            <li>8237</li>
+                                            <li>2189</li>
+                                            <li id="last-li">0104</li>
+                                          </ul>
+                                        </div>
+                                   <!--       User-->          
+                                        <div class='Name'>
+                                          <h3>Nombre del Usuario</h3>
+                                        </div>
+
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Mis Puntos-->
+                            <div class="flex-colum">
+                                <h3>Mis Puntos</h3>
+                                <div class="h75p padding1 w100 fondo-dragon flex-row gap5 colblanco flex-centro bold border20 ftsz1-3">
+                                    <p>125</p>
+                                    <div class="coin">
+                                        <div class="tails"></div>
+                                        <div class="heads"></div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <!--Mis Puntos-->
+                            <p>Gana mas puntos con nuestras <a class="bold" href="">Misiones</a> </p>
+                            <div class="grid3 gap1">
+                                <button onclick="mostrarModal(20);" class="bnegro flex-row padding1 colblanco border20 gap1 flex-centro">
+                                    <p class="ftsz1-1">Mis<br>Misiones</p>
+                                    <img class="w40 padding02 f-blanco" src="./img/mission.png" alt="">
+                                </button>
+                                <button onclick="mostrarModal(21);" class="bnegro flex-row padding1 colblanco border20 gap1 flex-centro">
+                                    <p class="ftsz1-1">Referir<br>Usuarios</p>
+                                    <img class="w40 f-blanco" src="./img/referral.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalServicios">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100 w100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 h100 border20 paddingprinc fondo-dragon flex-colum gap1">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Nuestros Servicios</h2>
+                        
+                        <div class="padsup1 flex-colum gap1">
+                             <!-- Producto 1 -->  
+                            <div class="flex-row flex-a bblanco bx gap1 padding1 border20">
+                                <img class="w30 border20" src="./img/webp/lavadorapido.webp" alt="">
+                                <div class="w70 flex-colum gap5">
+                                    <div>
+                                        <h3>Lavado Rápido</h3>
+                                        <p>Por fuera</p>
+                                    </div>
+                                    <p> Desde <b>s/ 8.00</b></p>
+                                    <a  href="https://api.whatsapp.com/send?phone=51968976064&text=%C2%A1Hola!%20Deseo%20el%20Servicio%20de%20Lavado%20Rápido" target="_blank" class="h-40px gap5 colblanco bverde padding1 border20 w100 flex-centro em0-9">
+                                        Reservar Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                              <!-- Producto 1 -->  
+                            <div class="flex-row flex-a bblanco bx gap1 padding1 border20">
+                                <img class="w30 border20" src="./img/webp/lavadosili.webp" alt="">
+                                <div class="w70 flex-colum gap5">
+                                    <div>
+                                        <h3>Lavado Básico</h3>
+                                        <p>Interior y Exterior con sílicona.</p>
+                                    </div>
+                                    <p> Desde <b>s/ 10.00</b></p>
+                                    <a  href="https://api.whatsapp.com/send?phone=51968976064text=%C2%A1Hola!%20Deseo%20el%20Servicio%20de%20Lavado%20Básico" target="_blank" class="h-40px gap5 colblanco bverde padding1 border20 w100 flex-centro em0-9">
+                                        Reservar Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                             <!-- Producto 1 -->  
+                            <div class="flex-row flex-a bblanco bx gap1 padding1 border20">
+                                <img class="w30 border20" src="./img/webp/lavadorasonax.webp" alt="">
+                                <div class="w70 flex-colum gap5">
+                                    <div>
+                                        <h3>Lavado Completo 1</h3>
+                                        <p>Interior y Exterior con cera Sonax y sílicona.</p>
+                                    </div>
+                                    <p> Desde <b>s/ 18.00</b></p>
+                                    <a  href="https://api.whatsapp.com/send?phone=51968976064&text=%C2%A1Hola!%20Deseo%20el%20Servicio%20de%20Lavado%20Completo%201" target="_blank" class="h-40px gap5 colblanco bverde padding1 border20 w100 flex-centro em0-9">
+                                        Reservar Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->   
+                             <!-- Producto 1 -->  
+                            <div class="flex-row flex-a bblanco bx gap1 padding1 border20">
+                                <img class="w30 border20" src="./img/webp/lavadorasonax.webp" alt="">
+                                <div class="w70 flex-colum gap5">
+                                    <div>
+                                        <h3>Lavado Completo 2</h3>
+                                        <p>Lavado Interior, Exterior,Lavado de motor y sílicona.</p>
+                                    </div>
+                                    <p> Desde <b>s/ 19.00</b></p>
+                                    <a  href="https://api.whatsapp.com/send?phone=51968976064&text=%C2%A1Hola!%20Deseo%20el%20Servicio%20de%20Lavado%20Completo%202" target="_blank" class="h-40px gap5 colblanco bverde padding1 border20 w100 flex-centro em0-9">
+                                        Reservar Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->   
+                            <!-- Producto 1 -->  
+                            <div class="flex-row flex-a bblanco bx gap1 padding1 border20">
+                                <img class="w30 border20" src="./img/webp/lavadom.webp" alt="">
+                                <div class="w70 flex-colum gap5">
+                                    <div>
+                                        <h3>Lavado Premium</h3>
+                                        <p>Interior y Exterior con cera Sonax, sílicona y Lavado de Motor.</p>
+                                    </div>
+                                    <p> Desde <b>s/ 27.00</b></p>
+                                    <a  href="https://api.whatsapp.com/send?phone=51968976064&text=%C2%A1Hola!%20Deseo%20el%20Servicio%20de%20Lavado%20Premium" target="_blank" class="h-40px gap5 colblanco bverde padding1 border20 w100 flex-centro em0-9">
+                                        Reservar Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalNosotros">
+        <div class="bodyModal w100 h100 rel pad01 flex-centro">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 fondo-dragon bnegro h100 border20 paddingprinc rel flex-colum gap1">
+                        
+                        <div class="zindex1 flex-colum gap1 colblanco">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Nosotros</h2>
+                        <p class="">SOMOS UNA EMPRESA DEDICADA A LA LIMPIEZA DETALLADA Y PROFESIONAL DE MOTOS, AUTOS, CAMIONETAS Y AUTOVAN.</p>
+                        <!--    <img class="w100"  src="./img/webp/nosotros-texto.webp" alt=""> -->
+                        <img src="./img/webp/img1.jpeg" alt="">
+                        <img src="./img/webp/img2.jpeg" alt="">
+                        <img src="./img/webp/img3.jpeg" alt="">
+                        <img src="./img/webp/img4.jpeg" alt="">
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres " id="modalTienda">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Productos</h2>
+                        <div class="padsup1 flex-colum gap1">
+                             <!-- Producto 1 -->  
+                            <div class="flex-row bx padsup5px border20">
+                                <img class="w30 padding05" src="https://autoplanet.pe/wp-content/uploads/2021/11/7757568000036-300x300.jpg" alt="">
+                                <div class="w70 flex-colum gap5 padding1">
+                                    <h3>Eliminador de Olores</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro">
+                                        Pedir Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                              <!-- Producto 1 -->  
+                            <div class="flex-row bx padsup5px border20">
+                                <img class="w30 padding05" src="https://autoplanet.pe/wp-content/uploads/2022/10/LUBULT15_BOT-300x300.jpg" alt="">
+                                <div class="w70 flex-colum gap5 padding1">
+                                    <h3>Aceite de Motor</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro">
+                                        Pedir Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                              <!-- Producto 1 -->  
+                            <div class="flex-row bx padsup5px border20">
+                                <img class="w30 padding1" src="https://autoplanet.pe/wp-content/uploads/2021/06/SMA0015324-300x300.jpg" alt="">
+                                <div class="w70 flex-colum gap5 padding1">
+                                    <h3>Refrigerante Radiador Rojo</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro">
+                                        Pedir Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                              <!-- Producto 1 -->  
+                            <div class="flex-row bx padsup5px border20">
+                                <img class="w30 padding05" src="https://autoplanet.pe/wp-content/uploads/2022/09/M1.G180124-300x300.jpg" alt="">
+                                <div class="w70 flex-colum gap5 padding1">
+                                    <h3>Limpiador de Aros</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="h-40px gap5 colblanco bverde padding1 border20 w90 flex-centro">
+                                        Pedir Ahora
+                                        <img class="w-30px" src="./img/icono-whastapp.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->   
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres " id="modalTiendavip">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Tienda VIP</h2>
+                        <div class="padsup1 grid3 gap1">
+                             <!-- Producto 1 -->  
+                            <div class="flex-colum bx padsup5px border20">
+                                <img class="w100 padding05" src="https://www.pngkit.com/png/detail/412-4123518_santa-te-dej-un-cupn-del-50-de.png" alt="">
+                                <div class=" flex-colum gap5 padding1">
+                                    <h3>Cupón de 50% Dscto</h3>
+                                    <b>100 Ptos</b>
+                                    <a  href="" class="wmxcnt h-40px gap5 colblanco bverde padding1 border20 flex-centro">
+                                        Canjear Ahora
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                             <!-- Producto 1 -->  
+                             <div class="flex-colum bx padsup5px border20">
+                                <img class="w100 padding05" src="https://ayuda.proscai.com/hc/article_attachments/360070808412/mceclip0.png" alt="">
+                                <div class=" flex-colum gap5 padding1">
+                                    <h3>Cupón de 25% Dscto</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="wmxcnt h-40px gap5 colblanco bverde padding1 border20 flex-centro">
+                                        Canjear Ahora
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                             <!-- Producto 1 -->  
+                             <div class="flex-colum bx padsup5px border20">
+                                <img class="w100 padding05" src="https://www.pngkit.com/png/detail/412-4123518_santa-te-dej-un-cupn-del-50-de.png" alt="">
+                                <div class=" flex-colum gap5 padding1">
+                                    <h3>Cupón de 10% Dscto</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="wmxcnt h-40px gap5 colblanco bverde padding1 border20 flex-centro">
+                                        Canjear Ahora
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                             <!-- Producto 1 -->  
+                             <div class="flex-colum bx padsup5px border20">
+                                <img class="w100 padding05" src="https://www.pngkit.com/png/detail/412-4123518_santa-te-dej-un-cupn-del-50-de.png" alt="">
+                                <div class=" flex-colum gap5 padding1">
+                                    <h3>Cupón de 15% Dscto</h3>
+                                    <b>S/. 5.00</b>
+                                    <a  href="" class="wmxcnt h-40px gap5 colblanco bverde padding1 border20 flex-centro">
+                                        Canjear Ahora
+                                    </a>
+                                </div>
+                            </div>
+                             <!-- Producto 1 -->  
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalSellos">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420"id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                        
+                        <div class="bx bblanco rel colnegro border20 h100 sinoverhor oververt">
+                            <div class="rel padding1 zindex1 border20 h100 flex-colum flex-a gap1">
+                            <div class="flex-colum gap5 flex-centro">
+                            <img class="w30 mgtp zindex3" src="./img/webp/logo.png" alt="">
+                            <p class="ftsz1-5 colnegro">Muñeco Auto Spa</p>
+                            </div>        
+                            <div class="flex-colum gap1 w100 flex-centro">
+                            <p class="tac bold padop1 colnegro">¡Realiza 6 Servicios y obtén
+                                 <br> 1 Lavado Rápido Gratis!</p>
+                            
+                                <div class="grid3icon gap1 w90 padding1" id="showvisitas">
+
+                                    <div class="w100 h100 brdrsecu bordernorm bsecu flex-centro padding07 bordercircular bx brdrnegro" id="sellado" alt="icono-sellado">
+                                        <img class="w100" src="./img/webp/icon-car.webp" alt="">
+                                    </div>
+                                    <div class="w100 h100 bordernorm bblanco flex-centro padding07 bordercircular bx" id="sinsellado" alt="icono-sinsellado">
+                                        <img class="w100" src="./img/webp/icon-car.webp" alt="">
+                                    </div>
+                                    <div class="w100 h100 bordernorm bblanco flex-centro padding07 bordercircular bx" id="sinsellado" alt="icono-sinsellado">
+                                        <img class="w100" src="./img/webp/icon-car.webp" alt="">
+                                    </div>
+                                    <div class="w100 h100 bordernorm bblanco flex-centro padding07 bordercircular bx" id="sinsellado" alt="icono-sinsellado">
+                                        <img class="w100" src="./img/webp/icon-car.webp" alt="">
+                                    </div>
+                                    <div class="w100 h100 bordernorm bblanco flex-centro padding07 bordercircular bx" id="sinsellado" alt="icono-sinsellado">
+                                        <img class="w100" src="./img/webp/icon-car.webp" alt="">
+                                    </div>
+                                    <!-- PREMIO
+                                    <div class="w100 padding02 borderdash brdrprinci bordercircular" id="gratis" alt="icono-gratis">
+                                        <div class=" w100 h100 flex-centro padding03 bprinci bordercircular">
+                                            <p class="fticon bold colnegro">PREMIO</p>
+                                        </div>
+                                    </div>
+                                -->
+                                    <div class="w100 h100 bordernorm bblanco flex-centro padding07 bordercircular bx" id="sinpremio" alt="icono-sinpremio">
+                                        <img class="w100" src="./img/webp/gift.png" alt="">
+                                    </div>
+                                    <div></div>
+                                    <div class="w100 h100 brdrsecu bsecu bordernorm flex-centro padding07 bordercircular bx brdrnegro" id="conpremio" alt="icono-conpremio">
+                                        <img class="w100" src="./img/webp/gift.png" alt="">
+                                    </div>
+                                
+                                </div>
+                            <h4 class="bold paddingbot">¡Gracias por tu VISITA!</h4>
+                            </div>
+                            </div>    
+                        </div>     
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalReservas">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Mis Reservas</h2>
+                        <div class="w90 padsup1 bblanco mgauto border20 ">
+                            <p class="colnegro brdrtpdash padsup1">Tu reserva esta: <b class="bold colrojo">por confirmarse</b></p>   
+                            <table class="w100 mgtp05 flex-colum colnegro padding1 brdrbtmdash brdrtpdash">
+                                <thead class="rel">
+                                    <tr class="grid2c abs w100">
+                                        <th class="paddingsup-4 textleft h50p">Solicitado</th>
+                                        <th class="paddingsup-4 textleft h50p">Estado</th>
+                                        <th class="paddingsup-4 textleft h50p">Fecha</th>
+                                        <th class="paddingsup-4 textleft h50p">Hora</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="w100">
+                                   
+                                        <tr class="grid2c w100">
+                                            <td class="paddingsup-4 textrigth h50p flex-end">03/03/2023</td>
+                                            <td class="paddingsup-4 textrigth h50p flex-end">Pendiente</td>
+                                            <td class="paddingsup-4 textrigth h50p flex-end">03/03/2023</td>
+                                            <td class="paddingsup-4 textrigth h50p flex-end">12:59</td>
+                                        </tr>
+                                    
+                                </tbody>
+                            </table>
+                            </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalPagos">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420">
+                <div class="w100 sinover rel containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <div class="overf w100 cblanco h100 border20  padding1 flex-colum gap1">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Medios de Pago</h3>
+                        <p>Elige tu método de Pago Favorito</p>
+                        <div class="flex-centro gap5 flex-colum">
+                            <div class="accordion">
+                                <input id="toggle1" type="radio" class="accordion-toggle" name="toggle" />
+                                <label class="yape" for="toggle1">QR Yape  <img src="./img/yape-logo.png" alt=""></label>
+                                <section class="sec-acc yape-flex yape2 w100">
+                                    <div class="bblanco w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1 borderdash">
+                                        <div class="top-1-5 gris2 abs padop1 border20 bold">Opción 1</div>
+                                        <p>Copia el siguiente numero</p>
+                                        <div class="w90 flex tac">
+                                            <div class="num colnegro copy">942444569</div>
+                                            <button class="icon-copy rel" id="copia">
+                                                COPIAR
+                                            </button>
+                                        </div> 
+                                        <div>
+                                        <p>A nombre de</p>
+                                        <h3 class="bold">PROPIETARIO DEL YAPE</h3>
+                                        </div>
+                                        <a class="yape flex-centro gap1 w80 h50p tac border20 colblan" href="https://play.google.com/store/apps/details?id=com.bcp.innovacxion.yapeapp&hl=es" target="_blank" > <img class="h70" src="https://mitarjetadigitalperu.com/dragoncarwash/Assets/web/img/yape-logo.png" alt="">Ir a Yape</a>
+                                    </div>
+                                    <div class="bblanco w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1 borderdash">
+                                    <div class="top-1-5 gris2 abs padop1 border20 bold">Opción 2</div>
+                                    <p>Escanea el QR usando Yape</p>
+                                    
+                                    <img class="qr w90 mgauto" src="./img/yapefransa.webp" alt="">
+                                    </div> 
+                                </section>
+                            </div>
+                            <div class="accordion">
+                                <input id="toggle2" type="radio" class="accordion-toggle" name="toggle" />
+                                <label class="plin" for="toggle2">QR Plin <img  src="./img/plin-logo.png" alt=""> </label>
+                                <section class="sec-acc yape-flex plin2 w100">
+                                    <div class="bblanco w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1 borderdash">
+                                        <div class="top-1-5 gris2 abs padop1 border20 bold">Opción 1</div>
+                                        <p>Copia el siguiente numero</p>
+                                        <div class="w90 flex tac">
+                                            <div class="num colnegro copy">942444569</div>
+                                            <button class="icon-copy rel" id="copia">
+                                                COPIAR
+                                            </button>
+                                        </div> 
+                                        <div>
+                                        <p>A nombre de</p>
+                                        <h3 class="bold">PROPIETARIO DEL PLIN</h3>
+                                        </div>
+                                    </div>
+                                    <div class="bblanco w100 padding1 border20 flex-c flex-colum rel mgtp1-5 gap1 borderdash">
+                                    <div class="top-1-5 gris2 abs padop1 border20 bold">Opción 2</div>
+                                    <p>Escanea el QR usando Plin</p>
+                                    
+                                    <img class="qr w90 mgauto" src="./img/plinfransa.webp" alt="">
+                                    </div> 
+                                </section>
+                            </div>
+                        </div>
+                        <p>Obtén tu tarjeta con : <a class="colnegro bold" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                    </div>
+                    <div class="confirmation abs">
+                        <span class="icon-checkmark"></span> Copied to clipboard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalRedes">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 paddingprinc flex-colum gap1">
+                        <h2 class="colnegro">Redes Sociales</h2>
+                        <section class="flex-colum padsupe">
+                            <a href="https://www.facebook.com/RPGLC" target="_blank" class="colnegro w100 mgauto padding1 flex flex-a gap1">
+                                <img class="icon-social" src="./img/iconos/facebook-round.svg" alt="">
+                                <div>
+                                    <p>Facebook</p>
+                                    <h4>RPGLC</h4>
+                                </div>
+                            </a>
+                           <!--  <a href="https://www.instagram.com/chololocarwash" target="_blank" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/instagram-rounda.svg" alt="">
+                                <div>
+                                    <p>Instagram</p>
+                                    <h4>chololocarwash</h4>
+                                </div>
+                            </a>
+                           <a href="https://www.youtube.com/" target="_blank" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="<?=mediaWeb();?>/img/iconos/youtube-round.svg" alt="">
+                                <div>
+                                    <p>Youtube</p>
+                                    <h4>@tortaza</h4>
+                                </div>
+                            </a> 
+                            <a href="https://www.tiktok.com/@washappslimpieza" class="w100 mgauto padding1 flex flex-a gap1">
+                                <img class="imginfo" src="./img/iconos/tiktok-round.svg" alt="">
+                                <div>
+                                    <p>Tiktok</p>
+                                    <h4>WashApp Limpieza</h4>
+                                </div>
+                            </a>--> 
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalMiqr">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+          <div class="flex-centro h100 w100 mw-420">
+              <div class="w100 sinover rel containerh h90 flex-centro contenedor-ad overin">
+                  <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                  
+                  <div class="overf w100 cblanco h100 border20 padding1 flex-colum gap1">
+                    <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Bienvenido  <b><?= $strnombres; ?></b> </h2>
+                    <p>Muestra tu Código QR o Código de Usuario en cada visita o Pago de servicio realizado para ganar un sello.</p>  
+                      <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                          <div class="top-1-5 bgris3 abs padop1 border20 bold">Opción 1</div>
+                          <p>Mi Código QR</p>  
+                              <div class="w80" id="qrcode"></div>
+                      </div> 
+                      <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                          <div class="top-1-5 bgris3 abs padop1 border20 bold">Opción 2</div>
+                          <p>Mi Código de Usuario</p>  
+                          <input readonly placeholder="DNI/Documento" class="ftsz1-3 bold border1px padding05 border2 tac flex-centro"  type="number" id="rcdni" name="rcdni" value="<?= $strnumdoc; ?>" required>
+                      </div> 
+                     
+                       <section class="tac bblanco padsup5px em0-9">
+                              <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                       </section>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <div class="modal fxd hres" id="modalOtorgar">
+        <div class="bodyModal flex-centro h100 w100 rel pad01">
+            <div class="flex-centro h100 w100 mw-420" id="contactar">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cblanco h100 border20 padding1 flex-colum gap1">
+                        <h2 class="colblanco padop1 wmxcnt bnegro mglft-1 borderder20 bgespe">Otorga Sellos</h2>  
+                      <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                          <div class="top-1-5 bgris3 abs padop1 border20 bold">Opción 1</div>
+                          <p>Escanéar Código QR de Cliente</p>  
+                          <button class="w80 mgauto h50p bordercircular bprinci flex-centro colblanco bold ftsz1-1 gap1" onclick="scanear();">
+                                <p>Escanéar QR</p> 
+                                <img class="icon-social f-blanco" src="./img/scanqr.png" alt="">                
+                        </button>
+                      </div> 
+                      <div class="bx w100 padding1-5 border20 flex-c flex-colum rel mgtp1-5 gap1">
+                          <div class="top-1-5 bgris3 abs padop1 border20 bold">Opción 2</div>
+                          <p>Ingresar Código de Cliente</p>  
+                          <form  class="form border20 flex-colum colblan flex-c"  autocomplete="off" id="formOtorgar">
+                            <div class="form-input flex-colum flex-c gap5 nombre">                                        
+                                <input class="border1px padding1 border2" type="text" id="txtDocumentOtorg" name="txtDocumentOtorg" placeholder="Numero de Documento" required>
+                            </div>                                   
+                            <div class="form-boton mgtp w100" >
+                                <input class="w80 mgauto h50p bordercircular bprinci flex-centro colblanco bold ftsz1-1" id="btn" type="submit" value="Otorgar Sello" class="button" >
+                            </div>
+                        </form>
+                          
+                      </div> 
+                     
+                       <section class="tac bblanco padsup5px em0-9">
+                              <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+                       </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalRegistrarCuenta">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100 w100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cnegro bblanco h100 border20 padding1 gap1 rel flex-colum">
+                        <form  class="form border20 flex-colum colblan flex-c gap5"  autocomplete="off" id="formRegistroCliente">
+                            <p class="form-titulo mayusc tac">Regístrate</p>
+                            <div class="form-input flex-colum flex-c gap5 nombre">
+                                <input placeholder="Nombres y Apellidos" class="border1px padding1 border2" type="text" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="flex gap1">
+                                <div class="form-input flex-colum flex-c gap5 nombre">
+                                    <input placeholder="DNI/Documento de Identidad" class="border1px padding1 border2" type="number" id="numdoc" name="numdoc" required>
+                                </div>
+                                <div class="form-input flex-colum flex-c gap5 mobile">
+                                    <input placeholder="Celular" class="border1px padding1 border2" type="number" id="mobile" name="mobile" required >
+                                </div>
+                            </div>
+                            <div class="form-input flex-colum flex-c gap5 direc">
+                                <input placeholder="Distrito o Dirección" class="border1px padding1 border2" type="text" id="direc" name="direc" required>
+                            </div>
+                            <div class="form-input flex-colum flex-c gap5 email">
+                                <input placeholder="Correo electrónico" class="border1px padding1 border2" type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-input flex-colum flex-c gap5 contrasena">
+                                <label for="contrasena">Contraseña</label>
+                                <input class="border1px padding1 border2" type="password"  id="contrasena" name="contrasena" required >
+                            </div>      
+                            <div class="form-input flex-colum flex-c gap5 confircontrasena">
+                                <label for="confircontrasena">Confirmar Contraseña</label>
+                                <input class="border1px padding1 border2" type="password"  id="confircontrasena" name="confircontrasena" required >
+                            </div>                       
+                            <div class="form-boton mgtp" >
+                                <input class="mgauto h50p bordercircular w60 bprinci flex-centro colblanco bold ftsz1-1" id="btn" type="submit" value="Regitrarse Ahora" class="button" >
+                            </div>
+                            <p class="mensajeCorrecto"></p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fxd hres" id="modalLogin">
+        <div class="bodyModal w100 h100 rel pad01">
+            <div class="flex-centro h100 w100">
+                <div class="w100 sinover rel mw-420 containerh h90 flex-centro contenedor-ad overin">
+                    <button class="popup__close zindex2 abs flex-centro" onclick="cerrarmodal();">&times;</button>
+                    <section class="overf w100 cnegro bblanco h100 border20 padding1 gap1 rel flex-colum">
+                        <form  class="form border20 flex-colum colblan flex-c"  autocomplete="off" id="formLogin">
+                            <p class="form-titulo mayusc tac">Inicia Sesión</p>                            
+                            <div class="form-input flex-colum flex-c gap5 email">
+                                <label for="email">Correo electrónico</label>
+                                <input class="border1px padding1 border2" type="email" id="txtEmail" name="txtEmail" required>
+                            </div>
+                            <div class="form-input flex-colum flex-c gap5 contrasena">
+                                <label for="mobile">Contraseña</label>
+                                <input class="border1px padding1 border2" type="password"  id="txtPassword" name="txtPassword" required >
+                                <div class="">                                
+                                    <a class=" flex-end mayusc bold colnegro" href="javascript:recovery();"><label>¿Olvidaste tu Contraseña?</label></a>
+                                </div>
+                            </div>
+                            <div class="form-boton mgtp" >
+                                <!--<button class="button" type="submit" id="btn">Iniciar</button>-->
+                                <input class="mgauto h50p bordercircular w60 bprinci flex-centro colblanco bold ftsz1-1" id="btn" type="submit" value="Iniciar Sesión" class="button" >
+                            </div>
+                            <p class="mensajeCorrecto"></p>
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modales -->
+    <div class="bg w100 h100 flex-centro">
+        <main class="mw-600 sinoverhor mgauto w100 h100 rel bnegro">
+            <section class="hcont sinover w100 rel tac flex-colum gap1 flex-centro">
+                <div class="nav">
+                    <input id="main-nav" type="checkbox">
+                    <label for="main-nav"><img class="w50" src="./img/login.png" alt=""></label>
+                    <ul class="flex-colum gap5">
+                            <li id="btn-registrate">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="mostrarModal(8);"><img class="w50" src="http://cdn.onlinewebfonts.com/svg/img_180671.png" alt="">Registrate</button>
+                            </li>                        
+                            <li id="btn-inicia-sesion">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="mostrarModal(9);"><img class="w50" src="./img/login.png" alt="">Iniciar Sesión</button>
+                            </li>
+                        <li id="btn-compartir">
+                            <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="mostrarModal(2);"><img class="w50" src="./img/compartir.svg" alt="">Compartir</button>
+                        </li>
+                            <li id="dashboard">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="irdashboard();"><img class="w50" src="https://cdn-icons-png.flaticon.com/512/4252/4252963.png" alt="">Mi panel</button>
+                            </li>
+                            <li id="btn-miqr">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="mostrarModal(23);"><img class="w50" src="https://cdn-icons-png.flaticon.com/128/2669/2669923.png" alt="">Otorgar Sello</button>
+                            </li>
+                            <li id="btn-miqr">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="mostrarModal(10);"><img class="w50" src="./img/QR_icon.png" alt="">Mi Qr</button>
+                            </li>
+                            <li id="btn-salir">
+                                <button class="btn-form w100 padding05 icon-btn gap5 flex-colum flex-centro" onclick="salir();"><img class="w50" src="./img/logout.png" alt="">Cerrar Sesión</button>
+                            </li>                  
+                    </ul>
+                </div>  
+                <div class="flex-colum flex-spacebetween bsecu w100 h100">
+                    <div class="w100 paddingverp bblanco">
+                      <img class="w50 zindex1 mgauto" src="./img/webp/grupolasamericas.png" alt="LOGO">  
+                    </div>
+                    
+                    <!-- div slider -->
+                    <div class="flex-colum gap1 bsecu paddingprinc">
+                        <h2>¡Haz Crecer Tu Negocio Hoy!</h2>
+                        <img class="w90" src="./img/webp/car.webp" alt="CAMIONETA">
+                        <p>Préstamos Microempresariales con Plazo Hipotecario</p>
+                        <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
+                            RESERVAR
+                        </button>
+                    </div>    
+                    <!-- div slider -->
+                    <!-- Menu --> 
+                    <nav class="w100 grid4c padding1 bblanco" alt="Menu-Horizontal">
+                    <button class="flex-centro flex-colum gap5 bblanco" onclick="mostrarModal(12);" >
+                        <div class="padding05 icon-1 aspct-1 flex-centro bprinci border05">
+                            <img class="mw-25p" src="./img/iconos-menu/servicios.png" alt="">
+                        </div>
+                        <p class="bold">Servicios</p>
+                    </button>
+                    <button class="bblanco flex-centro flex-colum gap5" onclick="mostrarModal(13);">
+                        <div class="padding05 icon-1 aspct-1 flex-centro bprinci border05">    
+                            <img class="mw-25p " src="./img/iconos-menu/apreton-de-manos.png" alt="">
+                        </div>
+                        <p class="bold wmxcnt">Redes S.</p>
+                    </button>
+                    <button class="bblanco flex-centro flex-colum gap5" onclick="mostrarModal(4);">
+                        <div class="padding05 icon-1 aspct-1 flex-centro bprinci border05">
+                            <img class="mw-25p " src="./img/iconos-menu/chat.png" alt="">
+                        </div>
+                        <p class="bold">Contactar</p>
+                    </button>
+                    <button class="bblanco flex-centro flex-colum gap5 " onclick="mostrarModal(3);">
+                        <div class="padding05 icon-1 aspct-1 flex-centro bprinci border05">
+                          <img class="mw-25p" src="./img/iconos-menu/marcador-de-posicion.png" alt="">
+                        </div>
+                        <p class="bold">Ubicación</p>
+                    </button>
+                    </nav>
+                    <!-- Menu --> 
+                </div>    
+            </section>
+            <section class="paddingprinc flex-colum gap1 bblanco">
+                <h2 class="cprincipal">¿Quienes Somos?</h2>
+                <p>En el vibrante escenario financiero de Lima, nace en 2023 Grupo Las Américas, una institución pionera con la misión de potenciar el desarrollo de sus clientes. Respaldados por líderes financieros con más de 15 años de experiencia, somos la clave para acceder a productos y servicios financieros adaptados a tus necesidades esenciales.</p>
+                <p>Somos más que una institución financiera; somos arquitectos de oportunidades. Desde el corazón del mercado de capitales, ofrecemos soluciones integrales de financiamiento e inversión, generando oportunidades de negocio que impulsan tanto a inversionistas como a emprendedores en Perú. Contribuimos activamente a la generación de riqueza y desarrollo sostenible.</p>
+                <p>Nuestra estrategia revoluciona el mercado de capitales peruano. Nos destacamos por la creación constante de productos innovadores, diseñados para acercar las oportunidades financieras a inversionistas y empresarios visionarios.</p>
+                <div class="padding1 bsecu colblanco gap1 flex-colum">
+                    <p>¡Construye tu legado financiero hoy! 🌐📈 Solicita nuestras soluciones y desata tu potencial económico con Grupo Las Américas. ¡Actúa ahora y asegura tu camino hacia el éxito financiero!</p>
+                    <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
+                        RESERVAR
+                    </button>
+                </div>
+            </section>
+            <section class="tac bblanco padsup5px em0-9">
+                <p>Obtén tu tarjeta con : <a class="bold colnegro" href="https://mitarjetadigitalperu.com" target="_blank"> www.mitarjetadigitalperu.com</a></p>
+            </section>
+        </main>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="./js/wsp.js"></script>
+    <script src="./js/functions_interaciones.js"></script>
+</body>
+</html>

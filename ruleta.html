@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Muñeco Auto Spa</title>
+        <link rel="stylesheet" href="./css/main.css" type="text/css" />
+        <script type="text/javascript" src="https://mitarjetadigitalperu.com/recursos/js/Winwheel.js"></script>
+        <script src="https://mitarjetadigitalperu.com/recursos/js/TweenMax.min.js"></script>
+        <link rel="stylesheet" href="./css/colores.css">
+        <link rel="stylesheet" href="./css/estilos-generales.css">  
+
+      
+        
+    <meta name="theme-color" content="#01011f">
+    <meta name="description" content="Mucho mas que un Lavado" />
+    <meta name="keywords" content="Muñeco Carwash" />
+    <meta name="author" content="mitarjetadigitalperu.com">
+    <meta property="og:locale" content="es_ES"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Muñeco Carwash"/>
+    <meta property="og:description" content="Mucho mas que un Lavado" />
+    <meta property="og:url" content="https://mitarjetadigitalperu.com/muñecoautospa/"/>
+    <meta property="og:site_name" content="Muñeco Carwash"/>
+    <meta property="og:image" content="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Muñeco Carwash" />
+    <meta name="twitter:description" content="Mucho mas que un Lavado" />
+    <meta name="twitter:image" content="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <link rel="image_src" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/portada.webp"/>
+    <link rel="icon" href="./img/icon.webp">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="196x196" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="96x96" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="32x32" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" sizes="128x128" />
+    <meta name="msapplication-TileColor" content="#01011f" />
+    <meta name="msapplication-TileImage" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-square70x70logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-config" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp">
+    <meta name="msapplication-square150x150logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-wide310x150logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+    <meta name="msapplication-square310x310logo" href="https://mitarjetadigitalperu.com/mu%C3%B1ecoautospa/img/icon.webp" />
+
+    </head>
+    <body>
+        <div class="w100 h100 sinover zindex0 abs">
+        <img class="w100 h100" src="./img/webp/fondo-naranja.png" alt="">
+        </div>
+        <canvas id="confetti-canvas" class="cnv"></canvas>
+        <div class="modale opened sinover flex-centro" aria-hidden="true">     
+            <div class="modal-dialog w100">
+                <div id="engagebud" class="flex-centro">
+                    <div class="w100 padding1">
+                        <!-- RULETA -->
+                        <div id="game-screen" class="flex-centro gap1 flex-colum padding1 rel">
+                            <img class="abs icon-circ zindex3 gift-esp" src="https://static.vecteezy.com/system/resources/thumbnails/022/937/124/small_2x/gift-3d-illustration-icon-png.png" alt="">
+                            
+                            <div id="canvasContainer" class="flex-centro bordercircular mw-360 mh-360 rel bprinci sombra">
+                                 <img class="abs icon-circ zindex3 gift-sp" src="https://uploads-ssl.webflow.com/607d3d39180ab97e9d30e4b9/619751103c53034384b7aa9f_confetti.png" alt="">
+                                <canvas id="canvas" width="340" height="340">
+                                    <p>Sorry, your browser doesn't support canvas. Please try another.</p>
+                                </canvas>
+                                <img class="marcador zindex3" src="https://influencex-profile-pictures.nyc3.cdn.digitaloceanspaces.com/pintop.png" alt="">
+                                <img id="bottle_img" src="https://mitarjetadigitalperu.com/mu%c3%b1ecoautospa/img/webp/logo.png" alt="">
+                            </div>
+                            <button class="brillo bordercircular" onclick="startSpin()">
+                                <div class="botonespecial bordercircular">Girar Ahora 🙌</div>
+                            </button>
+                        </div>
+                        <!-- RULETA -->
+                        <!-- RESULTADO -->
+                        <div id="win-screen" class="w100 rel padding1 hidden bblanco ticket">
+                            <div class="dashed flex-colum flex-centro gap1">
+                                <img src="https://mitarjetadigitalperu.com/mu%c3%b1ecoautospa/img/webp/logo.png" class="mw-150"/>
+                                <div class="ftszX2 tac">
+                                    Felicidades<br> Ganaste 👇
+                                </div>
+                                <div class="tac">
+                                    <span id="discountText" class="ftszXL"></span>
+                                </div>
+                                <div class="hidden">
+                                <span class="" onclick="redeemCode()">
+                                    <span class=""> Use Code: </span>
+                                    <span id="redeemSpan" class=""> </span>
+                                </span>
+                                </div>
+                                <div class="">
+                                    <a target="_blank" id="redeem-btn" class="ftsz1-3 botonespecial bordercircular">
+                                        <span class="">
+                                            Reclamar Ahora
+                                        </span>
+                                    </a>
+                                </div>
+
+                              </div>
+                        </div>
+                        <!-- RESULTADO -->
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <script src="https://mitarjetadigitalperu.com/recursos/js/confetti.browser.js"></script>
+        <script>
+            let spin = false, duration = 9, show = null, done = null, gameScreenId = "game-screen", winScreenId = "win-screen", redeemBtnId = "redeem-btn", redeemSpenId = "redeemSpan", discountTextId = "discountText";
+            // PRIZES
+            let segments = [
+              {'fillStyle' : '#00b8f1','text' : 'Lavado\nRapido', key: 1, code: "CRICKET125", rewardText: "No hay premio 😭", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%2010&%20de%20descuento"},
+              {'fillStyle' : '#ffffff','text' : 'Premium', key: 2, code: 'CRICKET300', rewardText: "💳 1 Membresia Premium", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%205&%20de%20descuento"},
+              {'fillStyle' : '#00b8f1','text' : '25%\ndscto', key: 3, code: "CRICKET200", rewardText: "💰 25% Dscto", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%202&%20de%20descuento"},
+              {'fillStyle' : '#ffffff','text' : 'Lavado\nGratis', key: 4, code: "T20WC200", rewardText: "🎉Lavado Gratis", gravity: 1, probability: "15%" , link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%20%%20de%20descuento"},
+              {'fillStyle' : '#00b8f1','text' : '50%\ndscto', key: 5, code: "FREEPIZZA", rewardText: "💰 50% Dscto", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%205%20de%20descuento"},
+              {'fillStyle' : '#ffffff','text' :  'Lavado\nRapido', key: 6, code: "FREEPIZZA", rewardText: "No hay premio 😭", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%205&%20de%20descuento"},
+              {'fillStyle' : '#00b8f1','text' :  'Lavado\nde Motor\nGratis', key: 7, code: "FREECAJE", rewardText: "🚿 Lavado de Motor Gratis", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%202&%20de%20descuento"},
+              {'fillStyle' : '#ffffff','text' : '25%\ndscto', key: 8, code: "T20WC200", rewardText: "💰 25% Dscto", gravity: 1, probability: "15%" , link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%20%%20de%20descuento"},
+              {'fillStyle' : '#00b8f1','text' : 'Encerado\nGratis', key: 9, code: "FREEPIZZA", rewardText: "🧼 Encerado Gratis", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%205%20de%20descuento"},
+              {'fillStyle' : '#ffffff','text' : '50%\ndscto', key: 10, code: "FREEPIZZA", rewardText: "💰 50% Dscto", gravity: 1, link: "https://api.whatsapp.com/send?phone=51972417095&text=%C2%A1Hola!%20He%20completado%20la%20ruleta%20y%20deseo%20reclamar%20el%205%20de%20descuento"}
+            ]
+            // Create new wheel object specifying the parameters at creation time.
+            let theWheel = new Winwheel({
+                'numSegments'  : segments.length,     // Specify number of segments.
+                'outerRadius'  : 169,   // Set outer radius so wheel fits inside the background.
+                'innerRadius'     : 60,           // make wheel hollow so segments don't go all way to center
+          'drawText'          : true, 
+          'textFontSize'      : 16,
+          'textAlignment'     : 'outer',
+          'textMargin'        : 15,
+          'textLineWidth'     : 2,
+          // 'scaleFactor': '0.5',
+          'textFillStyle'     : '#000',
+          'segments'     :  segments, // Define segments including colour and text.
+                'animation' :           // Specify the animation to use.
+                {
+                    'type'     : 'spinToStop',
+                    'duration' : duration,
+                    'spins'    : 17,
+                    'callbackFinished' : alertPrize,
+                    'callbackSound'    : playSound, // Function to call when the tick sound is to be triggered.
+                    'soundTrigger'     : 'pin'  // Specify pins are to trigger the sound, the other option is 'segment'.
+                },
+                'pins' :
+                {
+                    'number' : 16,   // Number of pins. They space evenly around the wheel.
+                    'fillStyle'  : '#341414',
+                  'outerRadius': 1,
+                }
+            });
+           
+            let audio = new Audio('https://mitarjetadigitalperu.com/recursos/audio/tick.mp3');  // Create audio object and load tick.mp3 file.
+
+            function playSound()
+            {
+                // Stop and rewind the sound if it already happens to be playing.
+                audio.pause();
+                audio.currentTime = 0;
+
+                // Play the sound.
+                audio.play();
+            }
+            // confetti
+            let cana = document.getElementById("confetti-canvas")
+            const jsConfetti = new JSConfetti({ cana })
+           // premio
+            function alertPrize(a)
+            {   
+                try {
+            document.getElementById("confetti-canvas").classList.toggle("hidden")
+            jsConfetti.addConfetti({emojis: ["🎁", "🎉", "🙌", "🎈"], emojiSize: 30, confettiNumber: 50})
+          } catch (e) {console.error(e)}
+          let g = document.getElementById(gameScreenId)
+          let w = document.getElementById(winScreenId)
+          g.classList.toggle("hidden")
+          w.classList.toggle("hidden")
+          document.getElementById(redeemBtnId).href = a.link
+          document.getElementById(redeemSpenId).innerText = a.code
+          console.log(a);
+          document.getElementById(discountTextId).innerText = a.rewardText
+          setTimeout(() => {
+                    try {
+                        document.getElementById("confetti-canvas").remove()
+                    } catch (e) {console.error(e)}
+                    }, 5000)
+               
+            }
+
+            function startSpin()
+            {
+                    // Begin the spin animation by calling startAnimation on the wheel object.
+                    theWheel.startAnimation();
+                    document.getElementById("bottle_img").className = "rotating_img"; // spin the inner bottle
+                    // Set to true so that power can't be changed and spin button re-enabled during
+                    // the current animation. The user will have to reset before spinning again.
+                    wheelSpinning = true;
+            }
+             // playWin(myWheel.getIndicatedSegment())
+            function getRedeemLink(code) {
+              return "pizzahut://coupons?coupon_code=" + code
+            }
+        </script>
+    </body>
+</html>
