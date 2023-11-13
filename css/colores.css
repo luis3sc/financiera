@@ -1,0 +1,259 @@
+:root{
+    --rojo:#eb0000;
+    --gris: #3d3d3d;
+    --negro: #000000;
+    --blanco: #ffffff;
+    --gris2: #b9b9b9;
+    --gris3: #e2e2e2;
+    --opticamarron: #2c2121;
+    --opticamarronosc: #140700;
+    --opticamarroncla: #005c81;
+    --principal:#fd4e03;
+    --segundo: #1b01ff;
+    --princi:#2ea100;
+    --rojoqatari: #f00;
+    --verde: #2ea100;
+}
+
+/*  color  */
+
+.bblanco,.cblanco,.colblan{
+    background-color: var(--blanco);
+  }
+  .gris2{
+    background-color: var(--gris2);
+  }
+  .bgris3{
+    background-color: var(--gris3);
+  }
+  .bg,.bgris,.gris{
+    background-color: var(--gris);
+  }
+  .bnegro{
+    background-color: var(--negro);
+  }
+  .bverde{
+    background-color: var(--verde);
+  }
+  .brojo{
+    background-color: var(--rojoqatari);
+  }
+  .bprinci{
+    background-color: var(--principal);
+  }
+  .bsecu{
+    background-color: var(--segundo);
+  }
+  .bnone{
+    background: none !important;
+  }
+  #btn{
+    background-color: var(--rojo);
+  }
+  #whastapp{
+    background-color: greenyellow;
+  }
+  #celular{
+    background-color: var(--gris2);
+  }
+  .yape{
+    background-color: #8121A0;
+  }
+  .yape2{
+    background-color: #9d3bbd;
+  }
+  .plin{
+    background-color: #018bf2;
+  }
+  .plin2{
+    background-color: hsl(206, 76%, 60%);
+  }
+  .colrojo{
+      color:var(--rojo);
+  }
+  .cprincipal{
+    color: var(--principal);
+}
+  .colverde{
+    color: var(--verde);
+  }
+  .colnar{
+    color: #fd7837;
+  }
+  .colblanco{
+    color: var(--blanco) !important;
+  }
+  .colnegro{
+    color: var(--negro);
+  }
+  .grdnt{
+    background: rgb(86,198,236);
+background: linear-gradient(360deg, rgba(86,198,236,1) 0%, rgba(86,183,236,1) 100%);
+  }
+/* Fonts */
+@font-face {
+    font-family: 'Franklin'; /*a name to be used later*/
+    src: url(../FranklinGothic-DemiCond.woff); /*URL to font*/
+}
+@font-face {
+    font-family: 'Impact'; /*a name to be used later*/
+    src: url(../Impact.woff); /*URL to font*/
+}
+.h2espe{
+    font-size: 1.6em;
+    font-family: 'Franklin';
+}
+.h2acord{
+    font-family: 'Franklin';
+    font-weight: 400;
+}
+.pagendar{
+  font-size: 1.8em;
+  font-weight: 600;
+  font-stretch: condensed;
+}
+.em1-2{
+    font-size: 1em;
+}
+.em0-3{
+    font-size: .3em;
+}
+.em0-9{
+    font-size: .8em;
+}
+.em0-5{
+    font-size: .7em;
+}
+.pparrafo{
+    font-size: 1em;
+  }
+  .ftsz1-1{
+    font-size: 1.1em !important;
+  }
+  .ftsz1-3{
+    font-size:1.3em !important;
+  }
+  .ftsz1-5  {
+    font-size:1.5em !important;
+  }
+  .ftsz1-7{
+    font-size:1.7em;
+  }
+  .bold{
+    font-weight: bold;
+  }
+  .textleft{
+    text-align: left;
+  }
+  .tac{
+    text-align: center;
+  }
+  .textjust{
+    text-align: justify;
+  }
+  .textrigth{
+    text-align: right;
+  }
+  h1{
+    font-size: 1.8em;
+  }
+  h4{
+    font-size: 1.3em;
+  }
+  .mayusc{
+    text-transform: uppercase;
+  }
+  .ltrspc-02{
+      letter-spacing: .15em;
+  }
+  /* fill svg */
+  .fillprin{
+    fill: var(--principal);
+  }
+  .fillsecu{
+    fill: var(--segundo);
+  }
+  /*  border */
+  .brdrprinci{
+    border-color: var(--principal) !important;
+  }
+  .brdrgris{
+    border-color: var(--gris2) !important;
+  }
+  .brdrblanc{
+    border-color: var(--blanco);
+  }
+  .brdrsecu{
+    border-color: var(--segundo) !important;
+  }
+  .brdrrojo{
+    border-color: var(--rojo) !important;
+  }
+  .brdrnegro{
+    border-color: var(--negro) !important;
+  }
+  .fticon{
+    font-size: 0.45em;
+    line-height: 4.5pt;
+    font-stretch: condensed;
+  }
+
+  /* Track */
+::-webkit-scrollbar-track {
+  background: var(--princi); 
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:  var(--segundo); 
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--segundo); 
+}
+
+.st0 {
+  fill: var(--negro);
+}
+.st1{
+  fill: var(--blanco);
+}
+.st0:hover{
+  fill:var(--gris2);
+}
+/** popup **/
+.popup__close {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--blanco);
+  top: -2%;
+  right: -2%;
+  width: 40px;
+  height: 40px;
+  background-color: var(--rojo);
+  border-radius: 50px;
+}
+
+/* border colors*/
+
+.brdrbtmdash{
+  border-bottom: 2px dashed var(--gris2);
+}
+.brdrtpdash{
+  border-top: 2px dashed var(--gris2);
+}
+.brdrblanc{
+  border: 2px solid var(--principal);
+}
+/* ss */
+.fondo-carwash{
+  background-image: url(../img/webp/fondo-2.webp);
+  background-position: center;
+  background-size: cover;
+}
+.fondo-dragon{
+  background-image: url(../img/webp/fondo-nar.webp);
+  background-size: cover;
+}
+.bgespe{
+  background: linear-gradient(85deg, rgba(0,175,206,1) 0%, rgba(16,112,173,1) 100%);
+}

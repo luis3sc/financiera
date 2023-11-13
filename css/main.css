@@ -1,0 +1,187 @@
+
+/* Sets the background image for the wheel */
+.the_wheel{
+   background-color: #86ef6f;
+   border-radius: 70em;
+   display: flex;
+   justify-content: center;
+   position: relative;
+   max-width: 438px;
+}
+
+.vorui-ubivai {
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyMDBweCIgaGVpZ2h0PSIyMDBweCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDIwMCAyMDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiNDMUQ5NTMiIGQ9Ik05MC40OTEsMTk5bDkuNTEyLTk4Ljk5N0wxMDkuNTE0LDE5OUg5MC40OTF6IE0xNDIuNzU1LDE4OS43NjhsLTQyLjc1Mi04OS43NjRsMjQuODc4LDk2LjI4M0wxNDIuNzU1LDE4OS43Njh6IE0xNzAuODM3LDE2OS43MDRsLTcwLjgzNC02OS43MDFsNTYuMjY0LDgxLjk1TDE3MC44MzcsMTY5LjcwNHogTTE5MC4zNywxNDEuMjI5bC05MC4zNjctNDEuMjI2bDgwLjg2LDU3LjcyN0wxOTAuMzcsMTQxLjIyOXogTTE5OSwxMDcuNzhsLTk4Ljk5Ny03Ljc3N2w5NS42OTksMjYuNTQxTDE5OSwxMDcuNzh6IE0xOTUuNjgyLDczLjM5MmwtOTUuNjc5LDI2LjYxMWw5OC45OS03Ljg1MUwxOTUuNjgyLDczLjM5MnogTTE4MC44MTksNDIuMjE0bC04MC44MTYsNTcuNzlsOTAuMzM1LTQxLjI5NEwxODAuODE5LDQyLjIxNHogTTE1Ni4yMDQsMTguMDEybC01Ni4yMDEsODEuOTkybDcwLjc4MS02OS43NTNMMTU2LjIwNCwxOC4wMTJ6IE0xMjQuODA3LDMuNzAzbC0yNC44MDQsOTYuMzAxbDQyLjY4NC04OS43OTZMMTI0LjgwNywzLjcwM3ogTTkwLjQxNywxLjAxNWw5LjU4Niw5OC45ODlMMTA5LjQzOCwxTDkwLjQxNywxLjAxNXogTTU3LjE4MywxMC4yNzJsNDIuODIsODkuNzMxTDc1LjA1MywzLjc0MUw1Ny4xODMsMTAuMjcyeiBNMjkuMTE3LDMwLjM1Nmw3MC44ODYsNjkuNjQ3TDQzLjY3NywxOC4wOThMMjkuMTE3LDMwLjM1NnogTTkuNjA0LDU4Ljg0Nmw5MC4zOTksNDEuMTU4TDE5LjA5OSw0Mi4zMzhMOS42MDQsNTguODQ2eiBNMSw5Mi4zMDNsOTkuMDAzLDcuN0w0LjI4NCw3My41MzdMMSw5Mi4zMDN6IE00LjM0MywxMjYuNjg4bDk1LjY2LTI2LjY4NWwtOTguOTg0LDcuOTI1TDQuMzQzLDEyNi42ODh6IE0xOS4yMjksMTU3Ljg1NGw4MC43NzQtNTcuODVMOS42OTksMTQxLjM2NUwxOS4yMjksMTU3Ljg1NHogTTQzLjg2MywxODIuMDM4bDU2LjE0LTgyLjAzNWwtNzAuNzI3LDY5LjgwN0w0My44NjMsMTgyLjAzOHogTTc1LjI3LDE5Ni4zMjNsMjQuNzMzLTk2LjMybC00Mi42MTYsODkuODI5TDc1LjI3LDE5Ni4zMjN6Ii8+PC9zdmc+);
+    background-color: #ff0;
+    height: 150vmax;
+    width: 150vmax;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-position: center;
+    animation: 60s rotate360 linear infinite;
+    margin: -75vmax 0 0 -75vmax;
+    filter: invert(18%) sepia(71%) saturate(130%) hue-rotate(128deg) brightness(79%) contrast(83%);
+  }
+  @keyframes rotate360 {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.ftszXL{
+    font-size: 2.7em;
+  }
+  .ftszX2{
+    font-size: 1.6em;
+    font-weight: 300;
+  }
+.marcador{
+    position: absolute;
+    width: 45px;
+    top: -10px;
+}
+
+/* Other misc styles */
+.margin_bottom
+{
+    margin-bottom: 5px;
+}
+.ad{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+/* RULETA **/
+/* RULETA **/
+/* RULETA **/
+/* RULETA **/
+/* RULETA **/
+.hidden,.cnv{
+    display: none !important;
+}
+
+.modale{
+  width: 100%;
+  height: 100%;
+}
+
+.cnv{
+  display: none;
+}
+
+
+/*s */
+.modal-dialog {
+  width: 100%;
+  max-width: 420px;
+  /*   background: #fefefe;
+  backdrop-filter: blur(6px);
+  background-color: rgba(247, 226, 223, 0.9);
+   border: #333333 solid 0px; */
+/* DYNAMIC 
+background-image: url('./fondo.png');
+https://influencex-profile-pictures.nyc3.cdn.digitaloceanspaces.com/feb_bg.webp*/
+background-size: 100% 100%;
+  border-radius: 5px;
+  position: fixed;
+/*  margin-left: -200px;
+  left: 55%;
+  top: -100%;*/
+  z-index: 11;
+  /*   box-shadow:0 5px 10px rgba(0,0,0,0.3); 
+  -webkit-transform: translate(0, -500%);
+  -ms-transform: translate(0, -500%);
+  transform: translate(0, -500%);*/
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+/*accesorios*/
+.gift-esp{
+  top: 2em;
+  left: 2em;
+}
+.gift-sp{
+  bottom: 1em;
+  right: 2em;
+}
+
+.sombra{
+    box-shadow: 0px 0px 5px 2px rgb(0 0 0) inset;
+  -webkit-box-shadow:  0px 0px 5px 2px rgb(0 0 0) inset ;
+  -moz-box-shadow: 0px 0px 5px 2px rgb(0 0 0) inset;
+  }
+  
+  .mw-150{
+    max-width: 150px;
+  }
+  .mw-360{
+    min-width: 360px;
+  }
+  .mh-360{
+    min-height: 360px;
+  }
+
+  /* girar logo */
+
+  
+#bottle_img {    
+    display: block; /* Need for rotation to work */
+    position: absolute;
+    max-width: 110px;
+    /* TODO: don't hard-code these guys */
+    }
+    /* Style applied to the bottle to make it spin */
+    .rotating_img {
+    /* Rotate for one second less than the wheel, looks better this way */
+    -webkit-transition: -webkit-transform 7.5s ease-out;
+    -webkit-transform: rotate(-3245deg);
+    }
+    
+/* efecto brillo boton*/
+.brillo {
+    animation: ebPulse 1.2s infinite;
+  }
+
+  @keyframes ebPulse {
+    0% { 
+      box-shadow:   0 0 0 0 rgba(255,255,255,0.7);
+  }
+    55% { 
+      box-shadow:   0 0 0 15px rgba(255,255,255,0);
+  }
+    100% { 
+      box-shadow:  0 0 0 0 rgba(255,255,255,0);
+  }
+  }
+  /* boton */
+
+  .botonespecial{
+    padding: .2em .5em;
+    background-color: #262262;
+    color: #fff;
+    width: 220px;
+    height: 60px;
+    font-variant-caps: unicase;
+    font-size: 2em;
+    cursor: pointer;
+    border: 4px solid #181546;
+    box-shadow: inset 0 0 10px #0b0927;
+    font-family: SharpSans;
+  }
+  .botonespecial:hover{
+    cursor: pointer;
+  }
+  /*sad*/
+  .dashed{
+    padding: 15px;
+    border: 2px dashed #000000;
+  }
