@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./css/colores.css">
     <link rel="stylesheet" href="./css/estilos-generales.css">
     <link rel="stylesheet" href="./css/editar.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <meta name="theme-color" content="#01011f">
     <meta name="description" content="Mucho mas que un Lavado" />
     <meta name="keywords" content="Muñeco Carwash" />
@@ -120,7 +120,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fxd hres" id="modalPromocion">
         <div class="bodyModal w100 h100 rel pad01 flex-centro">
             <div class="flex-centro h100 w100 mw-420" id="contactar">
@@ -1255,14 +1254,67 @@
                     </div>
                     
                     <!-- div slider -->
-                    <div class="flex-colum gap1 bsecu paddingprinc">
+                    <div class="container">
+                        <section class="head">
+                           <div class="swiper-container">
+                              <div class="swiper-wrapper">
+                                 <div class="swiper-slide">
+                                    <div class="product flex-colum gap1 padsup1">
+                                       <div class="product__left flex-colum gap5">
+                                            <h2>¡Haz Crecer Tu Negocio Hoy!</h2>
+                                            <p>Préstamos Microempresariales con Plazo Hipotecario</p>
+                                            <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
+                                                RESERVAR
+                                            </button>
+                                       </div>
+                                       <div class="product__right">
+                                            <img class="w90" src="./img/webp/car.webp" alt="CAMIONETA">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="product flex-colum gap1 padsup1">
+                                       <div class="product__left flex-colum gap5">
+                                            <h2>¡Haz Crecer Tu Negocio Hoy!</h2>
+                                            <p>Préstamos Microempresariales con Plazo Hipotecario</p>
+                                            <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
+                                                RESERVAR
+                                            </button>
+                                       </div>
+                                       <div class="product__right">
+                                            <img class="w90" src="./img/webp/car.webp" alt="CAMIONETA">
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="swiper-slide">
+                                    <div class="product flex-colum gap1 padsup1">
+                                       <div class="product__left flex-colum gap5">
+                                            <h2>¡Haz Crecer Tu Negocio Hoy!</h2>
+                                            <p>Préstamos Microempresariales con Plazo Hipotecario</p>
+                                            <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
+                                                RESERVAR
+                                            </button>
+                                       </div>
+                                       <div class="product__right">
+                                            <img class="w90" src="./img/webp/car.webp" alt="CAMIONETA">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="swiper-pagination"></div>
+                              <div class="swiper-button-prev"></div>
+                              <div class="swiper-button-next"></div>
+                           </div>
+                        </section>
+                     </div>
+                    <!-- <div class="flex-colum gap1 bsecu paddingprinc">
                         <h2>¡Haz Crecer Tu Negocio Hoy!</h2>
                         <img class="w90" src="./img/webp/car.webp" alt="CAMIONETA">
                         <p>Préstamos Microempresariales con Plazo Hipotecario</p>
                         <button class="mgauto h50p padding1 w60 bprinci flex-centro colblanco bold ftsz1-1" alt="Boton-reservar" onclick="mostrarModal(7);">
                             RESERVAR
                         </button>
-                    </div>    
+                    </div>     -->
                     <!-- div slider -->
                     <!-- Menu --> 
                     <nav class="w100 grid4c padding1 bblanco" alt="Menu-Horizontal">
@@ -1311,8 +1363,23 @@
             </section>
         </main>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/wsp.js"></script>
     <script src="./js/functions_interaciones.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper-container', {
+             loop: true,
+             autoplay: true,
+             pagination: {
+                 el: '.swiper-pagination',
+             },
+         
+             navigation: {
+                 nextEl: '.swiper-button-next',
+                 prevEl: '.swiper-button-prev',
+             },
+         })
+    </script>
 </body>
 </html>
