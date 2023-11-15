@@ -63,11 +63,12 @@
   .container {
     max-width: 1120px;
     overflow: hidden;
+    height: -webkit-fill-available;
   }
 
   .head {
     position: relative;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 5px;
   }
 
