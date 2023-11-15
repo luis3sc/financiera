@@ -439,6 +439,9 @@ width: 13em;
 .containerh{
   max-height: 740px;
 }
+.h-hka{
+  height: -webkit-fill-available;
+}
 .hres{
   height: var(--mobile);
 }
