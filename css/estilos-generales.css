@@ -221,6 +221,9 @@ width: 13em;
   }
 
 /* paddings */
+.padding0{
+  padding: 0 !important;
+}
 .padding02{
   padding: .2em;
 }
