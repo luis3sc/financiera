@@ -8,8 +8,8 @@
     --opticamarron: #2c2121;
     --opticamarronosc: #140700;
     --opticamarroncla: #005c81;
-    --principal:#fd4e03;
-    --segundo: #1b01ff;
+    --principal:#f37022;
+    --segundo: #2b2e8b;
     --princi:#2ea100;
     --rojoqatari: #f00;
     --verde: #2ea100;
@@ -73,6 +73,9 @@
   }
   .cprincipal{
     color: var(--principal);
+}
+.colsec{
+  color: var(--segundo);
 }
   .colverde{
     color: var(--verde);
